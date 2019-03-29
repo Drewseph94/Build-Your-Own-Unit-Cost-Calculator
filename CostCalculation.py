@@ -78,4 +78,4 @@ total_cost *= 10
 total_cost = trait_cost(total_cost)
 total_cost += 30
 
-Print(total_cost)
+print(total_cost)
