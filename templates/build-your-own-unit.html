@@ -15,7 +15,7 @@
     <div class="container">
         <h1>Build Your Own Unit</h1>
         <div class="content-section">
-            <form method="post" action="">
+            <form method="post" action="http://localhost:5000/calculate">
                 <fieldset class="form-group">
                     <div class="form-group">
                         {{ form.attack_bonus.label(class="form-control-label") }}
@@ -50,6 +50,7 @@
                     {{ form.submit_button(class="btn btn-outline-info") }}
                 </div>
             </form>
+            <span>Total Cost: {{ total_cost }}</span>
         </div>
     </div>
   {% endblock content %}

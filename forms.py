@@ -10,7 +10,7 @@ class CalculatorForm(FlaskForm):
     toughness_bonus = IntegerField('Toughness Bonus', validators=[DataRequired()])
     morale_bonus = IntegerField('Morale Bonus', validators=[DataRequired()])
 
-    unit_size = SelectField('Unit Size', choices=[(4, '1d4'), (6, '1d6'), (8, '1d8'), (10, '1d10'), (12, '1d12')],
+    unit_size = SelectField('Unit Size', choices=[('d4', '1d4'), ('d6', '1d6'), ('d8', '1d8'), ('d10', '1d10'), ('d12', '1d12')],
                            validators=[DataRequired()])
     unit_type = SelectField('Unit Type', choices=[
                                             ('Levy', 'Levy'),
