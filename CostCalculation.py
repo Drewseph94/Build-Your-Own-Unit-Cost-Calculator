@@ -1,4 +1,4 @@
-def calculate_cost(attack_bonus, power_bonus, defense_bonus, toughness_bonus, morale_bonus, unit_type, unit_size):
+def calculate_cost(unit):
     # attack_bonus = 2
     # power_bonus = 2
     # defense_bonus = 2
@@ -59,10 +59,11 @@ def calculate_cost(attack_bonus, power_bonus, defense_bonus, toughness_bonus, mo
         return int(att)+int(pow)+int(defense)+int(tough)+(int(mor)*2)
 
     def type_cost(total):
-        return total*type_modifiers[unit_type]
+        print(unit._type.cost_modifier)
+        return total*type_modifiers[unit._type.cost_modifier]
 
     def size_cost(total):
-        return total*size_modifiers[unit_size]
+        return total*size_modifiers[unit._size.cost_modifier]
 
     def trait_cost(total):
         return total+trait_cost_total
@@ -72,7 +73,7 @@ def calculate_cost(attack_bonus, power_bonus, defense_bonus, toughness_bonus, mo
     # unit_type_bonuses = calculate_type_bonuses(unit_type)
 
     total_cost = 0
-    total_cost = add_bonuses(attack_bonus, power_bonus, defense_bonus, toughness_bonus, morale_bonus)
+    total_cost = add_bonuses(unit.total_attack_bonus(), unit.total_power_bonus(), unit.total_defense_bonus(), unit.total_toughness_bonus(), unit.total_morale_bonus()*2)
     total_cost = type_cost(total_cost)
     total_cost = size_cost(total_cost)
     total_cost *= 10
