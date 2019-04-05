@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
 from forms import CalculatorForm
 import CostCalculation
-import CostCalculation
 import Unit
 
 app = Flask(__name__)
