@@ -20,5 +20,4 @@ def calculate_cost(unit):
     total_cost = trait_cost(total_cost)
     total_cost += 30
 
-    print(total_cost)
-    return total_cost
+    return str(round(total_cost,2))
