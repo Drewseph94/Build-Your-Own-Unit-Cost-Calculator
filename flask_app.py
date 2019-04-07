@@ -32,3 +32,4 @@ def calculate():
 
 if __name__ == '__main__':
     app.run()
+    app.config['SERVER_NAME'] = 'http://drewseph94.pythonanywhere.com/'
